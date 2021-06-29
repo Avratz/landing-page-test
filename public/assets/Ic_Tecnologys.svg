@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="570px" height="367px" viewBox="0 0 570 367" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Ic_Tecnologys</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic_Tecnologys" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Arial">
+        <g>
+            <text id="Rails" font-size="50" fill="#1D263A">
+                <tspan x="397" y="191">Rails</tspan>
+            </text>
+            <text id="Java" font-size="46" fill="#1D90C4">
+                <tspan x="111.198" y="201">Java</tspan>
+            </text>
+            <text id="Vue.js" font-size="54" fill="#A3CC39">
+                <tspan x="405.234" y="98">Vue.js</tspan>
+            </text>
+            <text id="Net-Core" font-size="48" fill="#29A5DD">
+                <tspan x="27.081" y="350">Net Core</tspan>
+            </text>
+            <text id="Node" font-size="54" fill="#9B9B9B">
+                <tspan x="232.234" y="145">Node</tspan>
+            </text>
+            <text id="Angular" font-size="55" fill="#1D263A">
+                <tspan x="170.18" y="50">Angular</tspan>
+            </text>
+            <text id="React" font-size="54" fill="#29A5DD">
+                <tspan x="34.158" y="120">React</tspan>
+            </text>
+            <text id="React-Native" font-size="64" fill="#29A5DD">
+                <tspan x="136.205" y="274">React Native</tspan>
+            </text>
+            <text id="Android" font-size="50" fill="#A3CC39">
+                <tspan x="373.292" y="355">Android</tspan>
+            </text>
+            <text id="iOS" font-size="50" fill="#9B9B9B">
+                <tspan x="0.24" y="270">iOS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
