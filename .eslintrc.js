@@ -19,6 +19,15 @@ module.exports = {
 	},
 	plugins: ['react','react-hooks'],
 	rules: {
+		"no-console": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_$"
+      }
+    ],
 		'prettier/prettier': [
 			'error',
 			{
@@ -31,7 +40,15 @@ module.exports = {
 				endOfLine: 'auto',
 			},
 		],
+		"import/order": ["warn", {"newlines-between": "always"}],
+    "react/self-closing-comp": "warn",
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-sort-props": ["warn", {
+      "callbacksLast": true,
+      "shorthandFirst": true,
+      "noSortAlphabetically": false,
+      "reservedFirst": true
+    }]
 	},
 }

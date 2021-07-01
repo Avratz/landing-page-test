@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Logo from 'app/components/Logo'
 
 const Header = () => {
