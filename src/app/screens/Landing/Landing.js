@@ -4,13 +4,13 @@ import Social from 'app/components/Social'
 import Benefits from 'app/components/Benefits'
 
 const LandingScreen = () => {
-  return (
-    <React.Fragment>
-      <Hero/> 
-      <Social/>
-      <Benefits/>
-    </React.Fragment>
-  )
+	return (
+		<React.Fragment>
+			<Hero />
+			<Social />
+			<Benefits />
+		</React.Fragment>
+	)
 }
 
 export default LandingScreen
