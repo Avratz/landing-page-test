@@ -41,7 +41,6 @@ module.exports = {
 			},
 		],
 		"import/order": ["warn", {"newlines-between": "always"}],
-    "react/self-closing-comp": "warn",
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-sort-props": ["warn", {

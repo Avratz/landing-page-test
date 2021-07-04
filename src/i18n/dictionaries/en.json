@@ -1,0 +1,37 @@
+{
+	"common": {
+		"home": "Home",
+		"benefits": "Benefits",
+		"login": "Login",
+		"register": "Register"
+	},
+	"generalError": {
+		"C-3PO": "I'm terribly sorry about all this."
+	},
+	"landing": {
+		"hero": {
+			"welcome": "Welcome to your <span>technical interview<span> in <span>Wolox</span>"
+		}
+	},
+	"social": {
+		"woloxers": "<span>350 +<span><span>Woloxers</span>",
+		"follow": "Follow Us",
+		"title": "We work to <span>transform</span> <span>ideas</span> into products."
+	},
+	"benefits": {
+		"title": "Some of the benefits that we offer are <span>;)</span>",
+		"flexibility": "Time flexibility",
+		"homeOffice": "Home Office",
+		"workshops": "Trainings and workshops",
+		"snacks": "Snacks, fruits and beverages free",
+		"remoteWeek": "Remote week",
+		"latestTechs": "Work on cutting edge technologies"
+	},
+	"thanks": {
+		"title": "Thank you for <span>completing the challenge</span>",
+		"subtite": "We invite you to see more information",
+		"more": "See more"
+	},
+	"auth": {},
+	"technologies": {}
+}
