@@ -7,7 +7,6 @@
 		"@testing-library/react": "^11.1.0",
 		"@testing-library/user-event": "^12.1.10",
 		"i18next": "^20.3.2",
-		"node-sass": "^6.0.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-i18next": "^11.11.0",
@@ -45,6 +44,8 @@
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.20.3",
 		"eslint-plugin-react-hooks": "^4.0.8",
-		"prettier": "^2.3.2"
+		"node-sass": "4.14.1",
+		"prettier": "^2.3.2",
+		"sass-loader": "^12.1.0"
 	}
 }

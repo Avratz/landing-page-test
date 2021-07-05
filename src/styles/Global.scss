@@ -1,0 +1,37 @@
+@import-normalize;
+@import './variables';
+@import './mixins';
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/assets/Fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: regular;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/assets/Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	font-size: 15px;
+	color: $text;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}

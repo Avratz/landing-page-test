@@ -1,12 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ title = 'default' }) => {
-	return <button>{title}</button>
+import styles from './Button.module.scss'
+
+const Button = ({ children, className = '', handleClick = () => null, theme = 'default' }) => {
+	const useTheme = {
+		default: styles.buttonDefault,
+		outline: styles.buttonDefaultOutline,
+		none: styles.none,
+		icon: styles.buttonIcon,
+	}
+	return (
+		<button className={useTheme[theme] + ' ' + className} onClick={handleClick}>
+			{children !== undefined ? children : ''}
+		</button>
+	)
 }
 
 Button.propTypes = {
-	title: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
+	handleClick: PropTypes.func,
+	theme: PropTypes.string,
+	className: PropTypes.string,
 }
 
 export default Button

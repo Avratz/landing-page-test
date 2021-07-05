@@ -8,7 +8,7 @@ module.exports = {
 		'react-app',
 		'plugin:react/recommended',
 		'prettier',
-    'plugin:prettier/recommended',
+		'plugin:prettier/recommended',
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -17,17 +17,17 @@ module.exports = {
 		ecmaVersion: 12,
 		sourceType: 'module',
 	},
-	plugins: ['react','react-hooks'],
+	plugins: ['react', 'react-hooks'],
 	rules: {
-		"no-console": "warn",
-    "no-unused-vars": [
-      "warn",
-      {
-        "args": "after-used",
-        "ignoreRestSiblings": false,
-        "argsIgnorePattern": "^_$"
-      }
-    ],
+		'no-console': 'warn',
+		'no-unused-vars': [
+			'warn',
+			{
+				args: 'after-used',
+				ignoreRestSiblings: false,
+				argsIgnorePattern: '^_$',
+			},
+		],
 		'prettier/prettier': [
 			'error',
 			{
@@ -40,14 +40,17 @@ module.exports = {
 				endOfLine: 'auto',
 			},
 		],
-		"import/order": ["warn", {"newlines-between": "always"}],
-    "react-hooks/rules-of-hooks": "warn",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-sort-props": ["warn", {
-      "callbacksLast": true,
-      "shorthandFirst": true,
-      "noSortAlphabetically": false,
-      "reservedFirst": true
-    }]
+		'import/order': ['warn', { 'newlines-between': 'always' }],
+		'react-hooks/rules-of-hooks': 'warn',
+		'react-hooks/exhaustive-deps': 'warn',
+		'react/jsx-sort-props': [
+			'warn',
+			{
+				callbacksLast: true,
+				shorthandFirst: true,
+				noSortAlphabetically: false,
+				reservedFirst: true,
+			},
+		],
 	},
 }
