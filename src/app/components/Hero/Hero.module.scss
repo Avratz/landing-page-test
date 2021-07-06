@@ -1,0 +1,53 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+section.hero {
+	width: 100%;
+	min-height: 80vh;
+	background: url('/assets/img/bgs/Bg_Header.png');
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoint-tablet() {
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @include breakpoint-desktop() {
+    max-width: 1700px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  max-width: 400px;
+  @include breakpoint-desktop() {
+    font-size: 4rem;
+    max-width: 680px;
+  }
+  span {
+    font-weight: bold;
+    &:last-of-type {
+      color: $secondary;
+    }
+  }
+}
+
+.heroImg{
+  transform: scaleX(-1);
+  @include breakpoint-tablet() {
+    width: 50%;
+    max-width: 650px;
+  }
+  @include breakpoint-desktop() {
+    margin-right: 9rem;
+  }
+}

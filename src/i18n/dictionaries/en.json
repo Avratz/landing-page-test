@@ -10,7 +10,7 @@
 	},
 	"landing": {
 		"hero": {
-			"welcome": "Welcome to your <span>technical interview<span> in <span>Wolox</span>"
+			"welcome": "Welcome to your <span>technical interview</span> in <span>Wolox</span>"
 		}
 	},
 	"social": {

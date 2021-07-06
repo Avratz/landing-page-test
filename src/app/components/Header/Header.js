@@ -2,8 +2,8 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Logo from 'app/components/Logo'
 import Button from 'app/components/Button'
-import ham from 'assets/ham.svg'
-import close from 'assets/close.svg'
+import ham from 'assets/img/ham.svg'
+import close from 'assets/img/close.svg'
 
 import styles from './Header.module.scss'
 

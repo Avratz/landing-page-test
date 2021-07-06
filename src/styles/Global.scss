@@ -14,13 +14,19 @@
 	font-weight: bold;
 }
 
+html{
+	box-sizing: border-box;
+	font: inherit;
+	font: 15px 'Montserrat', sans-serif;
+	color: $text;
+}
+
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
-	font-size: 15px;
-	color: $text;
-	font-family: 'Montserrat', sans-serif;
+	box-sizing: inherit;
+	font: inherit;
+	color: inherit;
 }
 
 body {
