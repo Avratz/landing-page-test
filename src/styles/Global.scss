@@ -10,8 +10,14 @@
 
 @font-face {
 	font-family: 'Montserrat';
+	src: url('/assets/Fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Montserrat';
 	src: url('/assets/Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
-	font-weight: bold;
+	font-weight: 800;
 }
 
 html{
@@ -21,9 +27,7 @@ html{
 	color: $text;
 }
 
-*,
-*:before,
-*:after {
+* {
 	box-sizing: inherit;
 	font: inherit;
 	color: inherit;

@@ -3,26 +3,24 @@
 
 .header {
 	width: 100%;
-  max-width: 1700px;
+}
+.container {
+	width: 100%;
+	max-width: 1700px;
+  height: 100px;
+	padding-left: 1rem;
+	padding-right: 1rem;
   margin: auto;
-	height: 80px;
-	padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .fixed {
-	position: fixed;
-	z-index: 100;
 	background-color: $white;
-	height: 80px;
-  width: 100%;
-  max-width: 1700px;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	@include breakpoint-tablet() {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+  height: 100px;
+	width: 100%;
 }
 
 .top {
@@ -49,7 +47,11 @@
 .fixedShadow {
 	background-color: $white;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.26, 0.8, 0.26, 1);
+	transition: all 1s cubic-bezier(0.26, 0.8, 0.26, 1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .nav {
@@ -91,9 +93,9 @@
 		&:last-of-type {
 			padding-right: 0;
 		}
-    &:hover{
-      color: $text-light;
-    }
+		&:hover {
+			color: $text-light;
+		}
 	}
 }
 

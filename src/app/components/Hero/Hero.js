@@ -10,10 +10,7 @@ const Hero = () => {
 	const [t] = useTranslation()
 	return (
 		<section className={styles.hero}>
-			<h2
-				dangerouslySetInnerHTML={{ __html: t('landing.hero.welcome') }}
-				className={styles.title}
-			></h2>
+			<h2 dangerouslySetInnerHTML={{ __html: t('hero.welcome') }} className={styles.title}></h2>
 			<figure className={styles.heroImg}>
 				<img alt="" src={small} srcSet={`${large} 1260w, ${medium} 840w, ${small} 420w`} />
 			</figure>

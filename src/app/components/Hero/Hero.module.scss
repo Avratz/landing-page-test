@@ -2,6 +2,7 @@
 @import '../../../styles/mixins';
 
 section.hero {
+  padding-top: 50px;
 	width: 100%;
 	min-height: 80vh;
 	background: url('/assets/img/bgs/Bg_Header.png');
@@ -12,6 +13,7 @@ section.hero {
   flex-direction: column;
   justify-content: space-between;
   @include breakpoint-tablet() {
+    background: url('/assets/img/bgs/Bg_Header@2x.png');
     min-height: auto;
     flex-direction: row;
     align-items: center;
@@ -20,6 +22,7 @@ section.hero {
     margin-bottom: 2rem;
   }
   @include breakpoint-desktop() {
+    background: url('/assets/img/bgs/Bg_Header@3x.png');
     max-width: 1700px;
     margin-right: auto;
     margin-left: auto;
@@ -29,6 +32,9 @@ section.hero {
 .title {
   font-size: 2rem;
   max-width: 400px;
+  @include breakpoint-tablet() {
+    width: 45%;
+  }
   @include breakpoint-desktop() {
     font-size: 4rem;
     max-width: 680px;
@@ -44,10 +50,10 @@ section.hero {
 .heroImg{
   transform: scaleX(-1);
   @include breakpoint-tablet() {
-    width: 50%;
+    width: 55%;
     max-width: 650px;
   }
   @include breakpoint-desktop() {
-    margin-right: 9rem;
+    margin-right: 4rem;
   }
 }

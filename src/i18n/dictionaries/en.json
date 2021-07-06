@@ -8,13 +8,11 @@
 	"generalError": {
 		"C-3PO": "I'm terribly sorry about all this."
 	},
-	"landing": {
-		"hero": {
-			"welcome": "Welcome to your <span>technical interview</span> in <span>Wolox</span>"
-		}
+	"hero": {
+		"welcome": "Welcome to your <span>technical interview</span> in <span>Wolox</span>"
 	},
 	"social": {
-		"woloxers": "<span>350 +<span><span>Woloxers</span>",
+		"woloxers": "<span>350 +</span> <span>Woloxers</span>",
 		"follow": "Follow Us",
 		"title": "We work to <span>transform</span> <span>ideas</span> into products."
 	},

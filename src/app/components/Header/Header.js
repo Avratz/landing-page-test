@@ -32,29 +32,31 @@ const Header = () => {
 		<header className={styles.header}>
 			<div
 				className={
-					offset > 100 && !visible ? styles.fixed + ' ' + styles.fixedShadow : styles.fixed
+					offset > 150 && !visible ? styles.fixed + ' ' + styles.fixedShadow : styles.fixed
 				}
 			>
-				<div className={styles.top}>
-					<Logo isFull />
-					<Button className={styles.button} handleClick={toggleNav} theme="icon">
-						<img alt="Menu button" src={visible ? close : ham} />
-					</Button>
+				<div className={styles.container}>
+					<div className={styles.top}>
+						<Logo isFull />
+						<Button className={styles.button} handleClick={toggleNav} theme="icon">
+							<img alt="" src={visible ? close : ham} />
+						</Button>
+					</div>
+					<nav className={visible ? styles.nav + ' ' + styles.visible : styles.nav}>
+						<a href="#home">{t('common.home')}</a>
+						<a href="#benefits">{t('common.benefits')}</a>
+						<Button theme="outline">{t('common.login')}</Button>
+						{lang === 'en' ? (
+							<a href="#changeLanguage" onClick={() => changeLanguage('es')}>
+								ES
+							</a>
+						) : (
+							<a href="#changeLanguage" onClick={() => changeLanguage('en')}>
+								EN
+							</a>
+						)}
+					</nav>
 				</div>
-				<nav className={visible ? styles.nav + ' ' + styles.visible : styles.nav}>
-					<a href="#home">{t('common.home')}</a>
-					<a href="#benefits">{t('common.benefits')}</a>
-					<Button theme="outline">{t('common.login')}</Button>
-					{lang === 'en' ? (
-						<a href="#changeLanguage" onClick={() => changeLanguage('es')}>
-							ES
-						</a>
-					) : (
-						<a href="#changeLanguage" onClick={() => changeLanguage('en')}>
-							EN
-						</a>
-					)}
-				</nav>
 			</div>
 		</header>
 	)
