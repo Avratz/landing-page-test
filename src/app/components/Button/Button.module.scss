@@ -3,20 +3,31 @@
 .base{
   width: 100%;
   min-width: 250px;
+  max-width: 300px;
   border-radius: 1.5rem;
-  border: 1px solid $primary;
+  border: 2px solid $primary;
   color: $white;
   background-color: $white;
   height: 44px;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.26, 0.8, 0.26, 1);
+  transition: all 0.2s cubic-bezier(0.26, 0.8, 0.26, 1);
 }
 
 .buttonDefault {
   @extend .base;
   background-color: $primary;
+  &:hover{
+    background-color: $primary-light;
+    border: 1px solid $primary-light;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.15);
+  }
+  &:active{
+    border: 1px solid $primary-dark;
+    background-color: $primary-dark;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.10), 0 1px 1px rgba(0,0,0,0.15);
+  }
 }
 
 .buttonDefaultOutline {
@@ -32,7 +43,6 @@
     border: 1px solid $primary-dark;
     background-color: $primary-dark;
     box-shadow: 0 1px 1px rgba(0,0,0,0.10), 0 1px 1px rgba(0,0,0,0.15);
-
   }
 }
 

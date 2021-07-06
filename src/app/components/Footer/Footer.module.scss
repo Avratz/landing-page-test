@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/helpers';
+
+.footer {
+  @extend .container;
+  width: 100%;
+  max-width: 100%;
+  min-height: 80vh;
+  padding: 1rem 0;
+  background-image: url('/assets/img/bgs/Bg_Footer.png');
+  text-align: center;
+  flex-direction: column;
+  @include breakpoint-tablet() {
+    background-image: url('/assets/img/bgs/Bg_Footer@2x.png');
+    background-size: contain;
+    min-height: 60vh;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @include breakpoint-desktop() {
+    background-image: url('/assets/img/bgs/Bg_Footer@3x.png');
+  }
+}
+
+.footerCompact {
+  @extend .footer;
+  min-height: auto;
+}

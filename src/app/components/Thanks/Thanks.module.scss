@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/helpers';
+
+.thanks {
+  @extend .container;
+  padding: 1rem;
+  min-height: 50vh;
+  text-align: center;
+  flex-direction: column;
+  @include breakpoint-tablet() {
+    min-height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    @include breakpoint-tablet() {
+      font-size: 2.5rem;
+    }
+    @include breakpoint-desktop() {
+      font-size: 3.5rem;
+    }
+    span {
+      color: $primary;
+    }
+  }
+  h3{
+    font-size: 1.5rem;
+    margin-bottom: auto;
+    @include breakpoint-tablet() {
+      font-size: 1.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 3rem;
+    }
+    @include breakpoint-desktop() {
+      font-size: 2.5rem;
+    }
+  }
+}

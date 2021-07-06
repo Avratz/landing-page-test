@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/helpers';
+
+.benefits{
+  @extend .container;
+  flex-direction: column;
+  min-height: 60vh;
+  padding-top: 1rem;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  @include breakpoint-desktop() {
+    margin-bottom: 3rem;
+  }
+  span {
+    color: $primary;
+  }
+}
+
+.benefitsList{
+  display: flex;
+  overflow: scroll;
+  width: 100%;
+  @include breakpoint-tablet() {
+    overflow: auto;
+		flex-wrap: wrap;
+    justify-content: space-around;
+	}
+}
+
+.line{
+  width: 90%;
+  height: 1px;
+  background-color: $light-bg;
+  border-bottom: 1px solid $line;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+  @include breakpoint-desktop() {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}

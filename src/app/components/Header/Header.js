@@ -19,6 +19,9 @@ const Header = () => {
 	}
 
 	const toggleNav = () => {
+		if (offset > 0 && !visible) {
+			scrollTo(undefined, '#home', 'auto')
+		}
 		setVisible((prev) => !prev)
 	}
 
@@ -26,25 +29,38 @@ const Header = () => {
 		window.onscroll = () => {
 			setOffset(window.pageYOffset)
 		}
-	}, [offset])
+	}, [])
+
+	const scrollTo = (e, section, behavior = 'smooth') => {
+		if (e !== undefined) e.preventDefault()
+		const $section = document.querySelector(section)
+		$section.scrollIntoView({ behavior, block: 'nearest' })
+		if (visible) {
+			setVisible(false)
+		}
+	}
 
 	return (
-		<header className={styles.header}>
+		<header className={styles.header} id="home">
 			<div
 				className={
 					offset > 150 && !visible ? styles.fixed + ' ' + styles.fixedShadow : styles.fixed
 				}
 			>
 				<div className={styles.container}>
-					<div className={styles.top}>
+					<div className={visible ? styles.top + ' ' + styles.show : styles.top}>
 						<Logo isFull />
 						<Button className={styles.button} handleClick={toggleNav} theme="icon">
 							<img alt="" src={visible ? close : ham} />
 						</Button>
 					</div>
 					<nav className={visible ? styles.nav + ' ' + styles.visible : styles.nav}>
-						<a href="#home">{t('common.home')}</a>
-						<a href="#benefits">{t('common.benefits')}</a>
+						<a href="#home" onClick={(e) => scrollTo(e, '#home')}>
+							{t('common.home')}
+						</a>
+						<a href="#benefits" onClick={(e) => scrollTo(e, '#benefits')}>
+							{t('common.benefits')}
+						</a>
 						<Button theme="outline">{t('common.login')}</Button>
 						{lang === 'en' ? (
 							<a href="#changeLanguage" onClick={() => changeLanguage('es')}>

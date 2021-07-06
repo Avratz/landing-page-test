@@ -1,36 +1,29 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
+@import '../../../styles/helpers';
 
 section.hero {
-  padding-top: 50px;
-	width: 100%;
+  @extend .container;
 	min-height: 80vh;
-	background: url('/assets/img/bgs/Bg_Header.png');
+	background-image: url('/assets/img/bgs/Bg_Header.png');
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
   @include breakpoint-tablet() {
-    background: url('/assets/img/bgs/Bg_Header@2x.png');
+    background-image: url('/assets/img/bgs/Bg_Header@2x.png');
+    background-size: contain;
     min-height: auto;
     flex-direction: row;
-    align-items: center;
     text-align: left;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
   @include breakpoint-desktop() {
-    background: url('/assets/img/bgs/Bg_Header@3x.png');
-    max-width: 1700px;
-    margin-right: auto;
-    margin-left: auto;
+    background-image: url('/assets/img/bgs/Bg_Header@3x.png');
+    min-height: calc(100vh - 100px);
   }
 }
 
 .title {
   font-size: 2rem;
+  margin-top: 0;
   max-width: 400px;
   @include breakpoint-tablet() {
     width: 45%;

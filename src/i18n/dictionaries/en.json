@@ -27,7 +27,7 @@
 	},
 	"thanks": {
 		"title": "Thank you for <span>completing the challenge</span>",
-		"subtite": "We invite you to see more information",
+		"subtitle": "We invite you to see more information",
 		"more": "See more"
 	},
 	"auth": {},

@@ -25,7 +25,9 @@ const Social = () => {
 						<img alt="" className={styles.twitterImg} src={twitter} />
 						<p>@wolox</p>
 					</div>
-					<Button className={styles.button}>{t('social.follow')}</Button>
+					<Button className={styles.button} theme="outline">
+						{t('social.follow')}
+					</Button>
 				</div>
 
 				<img

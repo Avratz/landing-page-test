@@ -27,7 +27,7 @@
 	},
 	"thanks": {
 		"title": "Gracias por <span>completar el ejercicio</span>",
-		"subtite": "Te invitamos a ver más información",
+		"subtitle": "Te invitamos a ver más información",
 		"more": "Conocer más"
 	},
 	"auth": {},
