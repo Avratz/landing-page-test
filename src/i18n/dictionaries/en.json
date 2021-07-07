@@ -30,6 +30,25 @@
 		"subtitle": "We invite you to see more information",
 		"more": "See more"
 	},
-	"auth": {},
+	"auth": {
+		"general": {
+			"email": "example@website.com",
+			"password": "Password"
+		},
+		"login": {
+			"dontHave": "Dont have an account? Register!",
+			"forgot": "Forgot your password?"
+		},
+		"register": {
+			"name": "Name",
+			"surname": "Surname",
+			"telephone": "Telephone",
+			"country": "Country",
+			"provice": "Provice",
+			"terms": "I agree with the terms and conditions",
+			"passwordRepeat": "Repeat password",
+			"haveAccount": "Already have an account? Login!"
+		}
+	},
 	"technologies": {}
 }

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.formBox { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $fwhite;
+  @include breakpoint-tablet() {
+    width: 550px;
+    min-height: 70vh;
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 2rem;
+    padding: 4rem 0;
+  }
+}
+
+.form{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  @include breakpoint-tablet() {
+    margin-top: 5rem;
+    width: 300px;
+  }
+
+  & > * {
+    margin: 1rem 0;
+  }
+}

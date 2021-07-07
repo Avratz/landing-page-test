@@ -10,7 +10,9 @@ const Thanks = () => {
 		<div className={styles.thanks}>
 			<h2 dangerouslySetInnerHTML={{ __html: t('thanks.title') }} className={styles.title}></h2>
 			<h3>{t('thanks.subtitle')}</h3>
-			<Button>{t('thanks.more')}</Button>
+			<Button handleClick={() => window.open('https://www.wolox.com.ar/')}>
+				{t('thanks.more')}
+			</Button>
 		</div>
 	)
 }

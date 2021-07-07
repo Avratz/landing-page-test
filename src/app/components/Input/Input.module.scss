@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+
+.input{
+  border: 1px solid $gray;
+  background-color: $white;
+  height: 44px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  &:focus-visible{
+    outline: $outline auto 1px;
+  }
+}

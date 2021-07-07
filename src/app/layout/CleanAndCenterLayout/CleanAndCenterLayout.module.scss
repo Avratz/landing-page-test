@@ -1,0 +1,16 @@
+@import '../../../styles/mixins';
+.clean {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/img/bgs/Bg_Header.png');
+  @include breakpoint-tablet() {
+    background-image: url('/assets/img/bgs/Bg_Header@2x.png');
+    background-size: contain;
+  }
+  @include breakpoint-desktop() {
+    background-image: url('/assets/img/bgs/Bg_Header@3x.png');
+  }
+}

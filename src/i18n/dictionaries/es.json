@@ -30,6 +30,25 @@
 		"subtitle": "Te invitamos a ver más información",
 		"more": "Conocer más"
 	},
-	"auth": {},
+	"auth": {
+		"general": {
+			"email": "ejemplo@empresa.com",
+			"password": "Contraseña"
+		},
+		"login": {
+			"dontHave": "¿No tenés cuenta? ¡Registrate!",
+			"forgot": "¿Olvidaste tu contraseña?"
+		},
+		"register": {
+			"name": "Nombre",
+			"surname": "Apellido",
+			"telephone": "Teléfono",
+			"country": "País",
+			"provice": "Provincia",
+			"terms": "Acepto Términos y Condiciones",
+			"passwordRepeat": "Repetir contraseña",
+			"haveAccount": "¿Ya tenés cuenta? ¡Inicia sesión!"
+		}
+	},
 	"technologies": {}
 }

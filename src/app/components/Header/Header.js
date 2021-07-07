@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useHistory } from 'react-router-dom'
 import Logo from 'app/components/Logo'
 import Button from 'app/components/Button'
 import ham from 'assets/img/ham.svg'
@@ -12,6 +13,7 @@ const Header = () => {
 	const [lang, setLang] = React.useState('es')
 	const [visible, setVisible] = React.useState(false)
 	const [offset, setOffset] = React.useState(0)
+	const history = useHistory()
 
 	const changeLanguage = (language) => {
 		setLang(language)
@@ -61,7 +63,9 @@ const Header = () => {
 						<a href="#benefits" onClick={(e) => scrollTo(e, '#benefits')}>
 							{t('common.benefits')}
 						</a>
-						<Button theme="outline">{t('common.login')}</Button>
+						<Button handleClick={() => history.push('/login')} theme="outline">
+							{t('common.login')}
+						</Button>
 						{lang === 'en' ? (
 							<a href="#changeLanguage" onClick={() => changeLanguage('es')}>
 								ES
