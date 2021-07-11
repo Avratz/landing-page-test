@@ -1,10 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import Logo from 'app/components/Logo'
 import Button from 'app/components/Button'
 import ham from 'assets/img/ham.svg'
 import close from 'assets/img/close.svg'
+import { useAuth } from 'auth/hooks/useAuth'
 
 import styles from './Header.module.scss'
 
@@ -14,6 +15,8 @@ const Header = () => {
 	const [visible, setVisible] = React.useState(false)
 	const [offset, setOffset] = React.useState(0)
 	const history = useHistory()
+	const location = useLocation()
+	const { state } = useAuth()
 
 	const changeLanguage = (language) => {
 		setLang(language)
@@ -28,19 +31,42 @@ const Header = () => {
 	}
 
 	React.useEffect(() => {
-		window.onscroll = () => {
+		const handleScroll = () => {
 			setOffset(window.pageYOffset)
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
 
-	const scrollTo = (e, section, behavior = 'smooth') => {
-		if (e !== undefined) e.preventDefault()
-		const $section = document.querySelector(section)
-		$section.scrollIntoView({ behavior, block: 'nearest' })
-		if (visible) {
-			setVisible(false)
+	const scrollTo = React.useCallback(
+		(e, section, behavior = 'smooth') => {
+			if (e !== undefined) e.preventDefault()
+			const $section = document.querySelector(section)
+			if ($section && (section !== '#home' || location.pathname === '/')) {
+				$section.scrollIntoView({ behavior, block: 'center' })
+			} else {
+				history.push('/', { section })
+			}
+			if (visible) {
+				setVisible(false)
+			}
+		},
+		[history, location.pathname, visible],
+	)
+	React.useEffect(() => {
+		let isMounted = true
+		if (isMounted) {
+			const section = location.state?.section
+			if (section && section !== '#home') {
+				scrollTo(undefined, section)
+			}
 		}
-	}
+		return () => {
+			isMounted = false
+		}
+	}, [location, scrollTo])
 
 	return (
 		<header className={styles.header} id="home">
@@ -63,16 +89,18 @@ const Header = () => {
 						<a href="#benefits" onClick={(e) => scrollTo(e, '#benefits')}>
 							{t('common.benefits')}
 						</a>
-						<Button handleClick={() => history.push('/login')} theme="outline">
-							{t('common.login')}
-						</Button>
+						{state === undefined ? (
+							<Button handleClick={() => history.push('/login')} theme="outline">
+								{t('common.login')}
+							</Button>
+						) : null}
 						{lang === 'en' ? (
 							<a href="#changeLanguage" onClick={() => changeLanguage('es')}>
-								ES
+								English
 							</a>
 						) : (
 							<a href="#changeLanguage" onClick={() => changeLanguage('en')}>
-								EN
+								Español
 							</a>
 						)}
 					</nav>

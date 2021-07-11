@@ -56,7 +56,7 @@ const Register = () => {
 				/>
 				<SelectBox
 					disabled={form.country ? false : true}
-					error={error.country}
+					error={error.province}
 					handleChange={handleChange}
 					name="province"
 					options={form.country ? PROVINCES[form.country] : []}
@@ -91,6 +91,7 @@ const Register = () => {
 					{error.acceptedTerms !== undefined ? (
 						<p className={styles.error}>{t(error.acceptedTerms)}</p>
 					) : null}
+					<Link to="/terms-and-conditions">{t('auth.register.readTerms')}</Link>
 				</React.Fragment>
 				<Button theme={disable ? 'disabled' : 'default'}>{t('common.register')}</Button>
 				<Link to="/login">{t('auth.register.haveAccount')}</Link>

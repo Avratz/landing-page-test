@@ -51,6 +51,8 @@
 			},
 			"provice": "Provincia",
 			"terms": "Acepto términos y condiciones",
+			"readTerms": "Ver terminos y condiciones",
+			"termsTitle": "Términos y condiciones",
 			"passwordRepeat": "Repetir contraseña",
 			"haveAccount": "¿Ya tenés cuenta? ¡Inicia sesión!"
 		},

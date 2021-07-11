@@ -8,22 +8,22 @@ export const COUNTRIES = [
 
 export const PROVINCES = {
 	argentina: [
-		{ name: 'Buenos Aires', value: 'buenos aires', id: 'arba1' },
+		{ name: 'Buenos Aires', value: 'buenos_aires', id: 'arba1' },
 		{ name: 'Cordoba', value: 'cordoba', id: 'arco2' },
-		{ name: 'Santa Fe', value: 'santa fe', id: 'arsf3' },
+		{ name: 'Santa Fe', value: 'santa_fe', id: 'arsf3' },
 		{ name: 'Mendoza', value: 'mendoza', id: 'arme4' },
 		{ name: 'Chubut', value: 'chubut', id: 'arch5' },
 	],
 	brasil: [
-		{ name: 'São Paulo', value: 'sao paulo', id: 'brsp1' },
-		{ name: 'Santa Catarina', value: 'santa catarina', id: 'brsc2' },
-		{ name: 'Río Grande del Sur', value: 'rio grande del sur', id: 'brrg3' },
-		{ name: 'Río de Janeiro', value: 'rio de janeiro', id: 'brrj4' },
-		{ name: 'Mato Grosso', value: 'mato grosso', id: 'brmg5' },
+		{ name: 'São Paulo', value: 'sao_paulo', id: 'brsp1' },
+		{ name: 'Santa Catarina', value: 'santa_catarina', id: 'brsc2' },
+		{ name: 'Río Grande del Sur', value: 'rio_grande_del_sur', id: 'brrg3' },
+		{ name: 'Río de Janeiro', value: 'rio_de_janeiro', id: 'brrj4' },
+		{ name: 'Mato Grosso', value: 'mato_grosso', id: 'brmg5' },
 	],
 	chile: [
 		{ name: 'Santiago', value: 'santiago', id: 'chsa1' },
-		{ name: 'La Serena', value: 'la serena', id: 'chls2' },
+		{ name: 'La Serena', value: 'la_serena', id: 'chls2' },
 		{ name: 'Cuyo', value: 'cuyo', id: 'chcu3' },
 		{ name: 'Chillán', value: 'chillan', id: 'chch4' },
 		{ name: 'Concepción', value: 'concepcion', id: 'chco5' },

@@ -17,8 +17,8 @@ const SelectBox = ({ options, placeholder, name, handleChange, error, disabled =
 				<option className={styles.option} value="">
 					{placeholder !== undefined ? placeholder : t('common.select')}
 				</option>
-				{options.map((option, k) => (
-					<option key={k} className={styles.option} value={option.value}>
+				{options.map((option) => (
+					<option key={option.id} className={styles.option} value={option.value}>
 						{option.name}
 					</option>
 				))}

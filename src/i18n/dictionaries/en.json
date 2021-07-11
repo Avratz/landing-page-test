@@ -47,6 +47,8 @@
 			"country": "Country",
 			"provice": "Provice",
 			"terms": "I agree with the terms and conditions",
+			"readTerms": "Read terms and conditions",
+			"termsTitle": "Terms And Conditions",
 			"passwordRepeat": "Repeat password",
 			"haveAccount": "Already have an account? Login!",
 			"select": {

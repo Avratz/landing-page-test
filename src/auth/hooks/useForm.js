@@ -2,11 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import validations from 'utils/validations'
 
+import { useAuth } from './useAuth'
+
 const useForm = (initialState) => {
 	const [form, setform] = React.useState(initialState)
 	const [active, setActive] = React.useState({})
 	const [error, setError] = React.useState({})
 	const [disable, setDisable] = React.useState(true)
+	const { actions } = useAuth()
 
 	React.useEffect(() => {
 		Object.keys(form).forEach((key) => {
@@ -19,7 +22,7 @@ const useForm = (initialState) => {
 				if (key === 'email' && validations.notEmail(val)) {
 					setError((prev) => ({ ...prev, [key]: 'auth.error.email' }))
 				}
-				if (key === 'name' || (key === 'surname' && validations.maxLength(val, 30))) {
+				if ((key === 'name' || key === 'surname') && validations.maxLength(val, 30)) {
 					setError((prev) => ({ ...prev, [key]: 'auth.error.maxLength' }))
 				}
 				if (key === 'telephone') {
@@ -50,10 +53,12 @@ const useForm = (initialState) => {
 	}, [form, active])
 
 	React.useEffect(() => {
-		Object.keys(error).filter((key) => error[key] !== undefined).length > 0
-			? setDisable(true)
-			: setDisable(false)
-	}, [error])
+		if (Object.keys(active).length === Object.keys(form).length) {
+			Object.keys(error).filter((key) => error[key] !== undefined).length > 0
+				? setDisable(true)
+				: setDisable(false)
+		}
+	}, [error, active, form])
 
 	const handleChange = (e) => {
 		if (e.target) {
@@ -69,11 +74,18 @@ const useForm = (initialState) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		Object.keys(form).forEach((key) => {
-			setActive((prev) => ({ ...prev, [key]: true }))
-		})
-		if (!disable) {
-			//apicall
+		if (disable === false) {
+			const { name, surname, country, province, email, telephone, password } = form
+			const formData = {
+				name,
+				last_name: surname,
+				country,
+				province,
+				mail: email,
+				phone: telephone,
+				password,
+			}
+			actions.signup(formData)
 		}
 	}
 
