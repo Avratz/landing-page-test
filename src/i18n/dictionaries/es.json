@@ -3,7 +3,8 @@
 		"home": "Inicio",
 		"benefits": "Beneficios",
 		"login": "Iniciar Sesión",
-		"register": "Registrarse"
+		"register": "Registrarse",
+		"select": "Seleccionar"
 	},
 	"generalError": {
 		"C-3PO": "I'm terribly sorry about all this."
@@ -44,10 +45,24 @@
 			"surname": "Apellido",
 			"telephone": "Teléfono",
 			"country": "País",
+			"select": {
+				"country": "Seleccionar país",
+				"province": "Seleccionar provincia"
+			},
 			"provice": "Provincia",
-			"terms": "Acepto Términos y Condiciones",
+			"terms": "Acepto términos y condiciones",
 			"passwordRepeat": "Repetir contraseña",
 			"haveAccount": "¿Ya tenés cuenta? ¡Inicia sesión!"
+		},
+		"error": {
+			"empty": "El campo no debe estar vacio.",
+			"maxLength": "El campo no puede tener más de 30 caracteres.",
+			"email": "El email debe ser válido.",
+			"invalidPassword": "La contraseña debe ser alfanumérica con al menos 6 caracteres.",
+			"passwordDontMatch": "Las contraseñas deben coincidir.",
+			"notNumber": "Este campo debe contener solo números.",
+			"maxLengthTel": "El teléfono no puede tener más de 10 dígitos.",
+			"acceptedTerms": "Debes aceptar los términos y condiciones."
 		}
 	},
 	"technologies": {}

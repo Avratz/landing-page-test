@@ -3,7 +3,8 @@
 		"home": "Home",
 		"benefits": "Benefits",
 		"login": "Login",
-		"register": "Register"
+		"register": "Register",
+		"select": "Select"
 	},
 	"generalError": {
 		"C-3PO": "I'm terribly sorry about all this."
@@ -47,7 +48,21 @@
 			"provice": "Provice",
 			"terms": "I agree with the terms and conditions",
 			"passwordRepeat": "Repeat password",
-			"haveAccount": "Already have an account? Login!"
+			"haveAccount": "Already have an account? Login!",
+			"select": {
+				"country": "Select country",
+				"province": "Select province / state"
+			}
+		},
+		"error": {
+			"empty": "Field must not be empty.",
+			"maxLength": "Field must not have more than 30 characters.",
+			"email": "Must be a valid email.",
+			"acceptedTerms": "Must accept terms and conditions",
+			"invalidPassword": "Password must be alphanumeric, and must have at least 6 characters long.",
+			"passwordDontMatch": "Password must be the same.",
+			"notNumber": "Field must have only numbers.",
+			"maxLengthTel": "Telephone must not have more than 10 digits long."
 		}
 	},
 	"technologies": {}

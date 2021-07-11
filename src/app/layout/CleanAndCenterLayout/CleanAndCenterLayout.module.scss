@@ -9,6 +9,7 @@
   @include breakpoint-tablet() {
     background-image: url('/assets/img/bgs/Bg_Header@2x.png');
     background-size: contain;
+    margin: 2rem 0;
   }
   @include breakpoint-desktop() {
     background-image: url('/assets/img/bgs/Bg_Header@3x.png');

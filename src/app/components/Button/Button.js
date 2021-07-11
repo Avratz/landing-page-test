@@ -7,6 +7,7 @@ const Button = ({ children, className = '', handleClick = () => null, theme = 'd
 	const useTheme = {
 		default: styles.buttonDefault,
 		outline: styles.buttonDefaultOutline,
+		disabled: styles.buttonDisabled,
 		none: styles.none,
 		icon: styles.buttonIcon,
 	}

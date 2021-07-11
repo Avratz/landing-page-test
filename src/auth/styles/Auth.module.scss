@@ -30,6 +30,20 @@
   }
 
   & > * {
-    margin: 1rem 0;
+    margin: 1.1rem 0;
   }
+}
+
+.terms{
+  display: flex;
+  align-items: center;
+  input{
+    margin-left: 0.5rem;
+  }
+}
+
+.error {
+	color: $error;
+	margin: 0 !important;
+	font-size: 11px;
 }

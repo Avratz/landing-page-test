@@ -104,7 +104,7 @@
   }
   100% {
     transform: translateY(0);
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.2);
+		box-shadow: $shadow-2;
     opacity: 1;
   }
 }

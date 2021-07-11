@@ -3,12 +3,22 @@ $primary-light: #15C2FF;
 $primary-dark: #198ABD;
 $secondary: #97CF00;
 $text: #1B263C;
-$text-light: #596C93;
+$text-light: #7a8cb1;
 $outline: #DCE8FF;
 $light-bg: #F2F5FA;
 $white: #fff;
 $fwhite: #fafafa;
+$error: #F44336;
+$error-outline: #E57373;
 
 $line: #EFF1F5;
 $gray: #D3D3D3;
+$gray-dark: #999;
 
+//shadows
+$shadow-1: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$shadow-2: 0 2px 5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.2);
+$shadow-3: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+
+//animations
+$animation-1: all 0.2s cubic-bezier(0.26, 0.8, 0.26, 1);
