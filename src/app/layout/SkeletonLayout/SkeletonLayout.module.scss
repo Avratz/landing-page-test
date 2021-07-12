@@ -1,0 +1,27 @@
+@import '../../../styles/helpers';
+@import '../../../styles/mixins';
+
+
+.header {
+	width: 100%;
+  height: 100px;
+  max-width: 1700px;
+  margin: auto;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.displayNone{
+  @include breakpoint-tablet() {
+    display: none;
+  }
+}
+
+.nav{
+  display: none;
+  @include breakpoint-tablet() {
+    display: flex;
+    width: 20%;
+  }
+}

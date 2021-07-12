@@ -1,5 +1,6 @@
-@import '../../../styles/helpers';
-@import '../../../styles/mixins';
+@import '../../styles/helpers';
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .technologies {
 	@extend .container;
@@ -17,16 +18,16 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-  margin: 1rem 0 3rem;
+	margin: 1rem 0 3rem;
 	@include breakpoint-tablet() {
 		flex-direction: row;
-    width: 80%;
+		width: 80%;
 	}
 }
 
 .search {
 	width: 100%;
-  @include breakpoint-tablet() {
+	@include breakpoint-tablet() {
 		width: 80%;
 	}
 }
@@ -35,7 +36,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-  @include breakpoint-tablet() {
+	@include breakpoint-tablet() {
 		padding-left: 2rem;
 	}
 }

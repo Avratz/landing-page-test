@@ -22,3 +22,15 @@ $shadow-3: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
 
 //animations
 $animation-1: all 0.2s cubic-bezier(0.26, 0.8, 0.26, 1);
+
+@keyframes pulse {
+  0% {
+    background-color: $fwhite;
+  }
+  50%{
+    background-color: $line;
+  }
+  100% {
+    background-color: $fwhite;
+  }
+}

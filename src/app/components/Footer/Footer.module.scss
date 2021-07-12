@@ -26,5 +26,6 @@
 
 .footerCompact {
   @extend .footer;
-  min-height: auto;
+  margin-top: 3rem;
+  min-height: 40vh;
 }

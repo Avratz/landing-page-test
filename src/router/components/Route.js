@@ -5,7 +5,7 @@ import { useAuth } from 'auth/hooks/useAuth'
 
 const Route = ({ redirectTo, onlyForAuth = false, authNeeded = false, ...props }) => {
 	const { state } = useAuth()
-	const authorized = state ? true : false
+	const authorized = state.user ? true : false
 	if (authNeeded && !authorized) {
 		return (
 			<Redirect

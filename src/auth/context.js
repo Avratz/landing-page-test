@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
+import SkeletonLayout from 'app/layout/SkeletonLayout/SkeletonLayout'
+import SkeletonTech from 'technologies/screens/SkeletonTech'
 
 import api from './api/client'
 
@@ -32,7 +34,7 @@ const AuthProvider = ({ children }) => {
 	}, [user])
 
 	React.useEffect(() => {
-		if (favorites !== undefined) {
+		if (favorites) {
 			window.localStorage.setItem('FAVORITES', JSON.stringify(favorites))
 		}
 	}, [favorites])
@@ -89,7 +91,12 @@ const AuthProvider = ({ children }) => {
 		[user, favorites, actions],
 	)
 
-	if (loading) return <p>Loading...</p>
+	if (loading)
+		return (
+			<SkeletonLayout header>
+				<SkeletonTech />
+			</SkeletonLayout>
+		)
 	return <AuthContext.Provider value={stateMemo}>{children}</AuthContext.Provider>
 }
 

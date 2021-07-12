@@ -1,3 +1,6 @@
+@import './variables';
+@import './mixins';
+
 .container {
 	width: 100%;
 	max-width: 1700px;
@@ -8,4 +11,63 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+.rect {
+	height: 40px;
+	animation: pulse 1s ease-in-out infinite;
+	margin: 0 1rem;
+}
+
+.rectH15 {
+	@extend .rect;
+	width: 15%;
+}
+
+.rectH20 {
+	@extend .rect;
+	width: 20%;
+}
+
+.rectH40 {
+	@extend .rect;
+	width: 40%;
+}
+
+.rectH60 {
+	@extend .rect;
+	width: 60%;
+}
+
+.rectH80 {
+	@extend .rect;
+	width: 80%;
+}
+
+.square44{
+	@extend .rect;
+	width: 44px;
+  height: 44px;
+}
+
+.skeletonGeneral{
+  @extend .rect;
+  margin: auto;
+  max-width: 1700px;
+	width: 100%;
+  height: 80vh;
+}
+
+.rectV80{
+	@extend .rect;
+	width: 100%;
+	height: 60vh;
+	margin: 1rem 0;
+	@include breakpoint-tablet() {
+		width: 45%;
+	}
+	@include breakpoint-desktop() {
+		width: 28%;
+	}
 }

@@ -89,7 +89,7 @@ const Header = () => {
 						<a href="#benefits" onClick={(e) => scrollTo(e, '#benefits')}>
 							{t('common.benefits')}
 						</a>
-						{state === undefined ? (
+						{state.user === undefined ? (
 							<Button handleClick={() => history.push('/login')} theme="outline">
 								{t('common.login')}
 							</Button>
