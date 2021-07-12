@@ -4,7 +4,8 @@
 		"benefits": "Benefits",
 		"login": "Login",
 		"register": "Register",
-		"select": "Select"
+		"select": "Select",
+		"favorites": "Favorites"
 	},
 	"generalError": {
 		"C-3PO": "I'm terribly sorry about all this."
@@ -67,5 +68,11 @@
 			"maxLengthTel": "Telephone must not have more than 10 digits long."
 		}
 	},
-	"technologies": {}
+	"technologies": {
+		"filters": {
+			"search": "Search...",
+			"sortByName": "Sort by name",
+			"quantity": "Technologies that match your search criteria:"
+		}
+	}
 }

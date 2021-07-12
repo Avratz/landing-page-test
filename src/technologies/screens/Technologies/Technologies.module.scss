@@ -1,0 +1,47 @@
+@import '../../../styles/helpers';
+@import '../../../styles/mixins';
+
+.technologies {
+	@extend .container;
+	flex-direction: column;
+	padding: 1rem;
+	@include breakpoint-tablet() {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+  margin: 1rem 0 3rem;
+	@include breakpoint-tablet() {
+		flex-direction: row;
+    width: 80%;
+	}
+}
+
+.search {
+	width: 100%;
+  @include breakpoint-tablet() {
+		width: 80%;
+	}
+}
+
+.sortBy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  @include breakpoint-tablet() {
+		padding-left: 2rem;
+	}
+}
+
+.total {
+	width: 90%;
+	text-align: center;
+	padding: 2rem 0;
+}

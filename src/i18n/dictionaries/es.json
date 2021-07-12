@@ -4,7 +4,8 @@
 		"benefits": "Beneficios",
 		"login": "Iniciar Sesión",
 		"register": "Registrarse",
-		"select": "Seleccionar"
+		"select": "Seleccionar",
+		"favorites": "Favoritos"
 	},
 	"generalError": {
 		"C-3PO": "I'm terribly sorry about all this."
@@ -67,5 +68,11 @@
 			"acceptedTerms": "Debes aceptar los términos y condiciones."
 		}
 	},
-	"technologies": {}
+	"technologies": {
+		"filters": {
+			"search": "Buscar...",
+			"sortByName": "Ordenar por nombre",
+			"quantity": "Tecnologías que cumplen con tus criterios de búsqueda:"
+		}
+	}
 }

@@ -1,0 +1,89 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.technology {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 2rem;
+	background-color: $fwhite;
+	box-shadow: $shadow-3;
+	margin: 1rem 0;
+	@include breakpoint-tablet() {
+		width: 45%;
+	}
+	@include breakpoint-desktop() {
+		width: 28%;
+		padding: 3.5rem;
+	}
+}
+
+.imgBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 30vh;
+}
+
+.img {
+	width: 50%;
+}
+
+.title {
+	font-size: 2.5rem;
+	margin: 0;
+	@include breakpoint-desktop() {
+		font-size: 3.5rem;
+	}
+}
+
+.subtitle {
+	font-size: 1.5rem;
+	margin: 0;
+	@include breakpoint-desktop() {
+		font-size: 2rem;
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 2rem 1rem;
+}
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include breakpoint-tablet() {
+		flex-direction: row;
+	}
+	span {
+		width: 80%;
+		display: flex;
+		align-items: center;
+		@include breakpoint-tablet() {
+			width: 100%;
+		}
+		img {
+			margin-right: 1rem;
+		}
+	}
+}
+
+.icon {
+	width: 33px;
+	margin: 0.5rem;
+}
+
+.fav {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+  img{
+    width: 100%;
+  }
+}

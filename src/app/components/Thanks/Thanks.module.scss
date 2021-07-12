@@ -5,7 +5,7 @@
 .thanks {
   @extend .container;
   padding: 1rem;
-  min-height: 50vh;
+  min-height: 60vh;
   text-align: center;
   flex-direction: column;
   @include breakpoint-tablet() {

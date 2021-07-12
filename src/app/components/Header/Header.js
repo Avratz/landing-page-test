@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory, useLocation, Link } from 'react-router-dom'
 import Logo from 'app/components/Logo'
 import Button from 'app/components/Button'
 import ham from 'assets/img/ham.svg'
@@ -93,6 +93,11 @@ const Header = () => {
 							<Button handleClick={() => history.push('/login')} theme="outline">
 								{t('common.login')}
 							</Button>
+						) : state.favorites.length > 0 ? (
+							<Link to="/technologies">
+								{t('common.favorites')}
+								{'(' + state.favorites.length + ')'}
+							</Link>
 						) : null}
 						{lang === 'en' ? (
 							<a href="#changeLanguage" onClick={() => changeLanguage('es')}>

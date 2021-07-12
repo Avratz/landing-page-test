@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
+@import '../../styles/helpers';
 
 .formBox { 
   display: flex;
@@ -47,4 +48,13 @@
 	color: $error;
 	margin: 0 !important;
 	font-size: 11px;
+}
+
+.tos{
+  @extend .container;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+.tosTitle{
+  font-size: 2rem;
 }
